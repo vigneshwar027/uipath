@@ -1,0 +1,15 @@
+﻿{
+  "Id": "aZapJKvmW0CuK8ql2q7eqQ",
+  "Reference": "JSpcqKC9aEelbjIJYPdu2A/aZapJKvmW0CuK8ql2q7eqQ",
+  "ParentRef": "JSpcqKC9aEelbjIJYPdu2A/U_BuAPiwAESLUERdt4UWqg",
+  "Name": "ChromeBrowser",
+  "Type": "Screen",
+  "Created": "2022-11-04T06:46:53.6647305Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-04T06:47:11.2028908Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

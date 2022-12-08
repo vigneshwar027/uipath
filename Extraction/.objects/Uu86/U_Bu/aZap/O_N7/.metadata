@@ -1,0 +1,14 @@
+﻿{
+  "Id": "O_N7vWFqdUuJkUzWWbt_ng",
+  "Reference": "JSpcqKC9aEelbjIJYPdu2A/O_N7vWFqdUuJkUzWWbt_ng",
+  "ParentRef": "JSpcqKC9aEelbjIJYPdu2A/aZapJKvmW0CuK8ql2q7eqQ",
+  "Name": "NextButton",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Created": "2022-11-04T06:48:15.9540532Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=22.10.1.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-04T06:48:15.9540532Z"
+}

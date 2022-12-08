@@ -1,0 +1,384 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Table_Extraction" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="700,4914" sap2010:WorkflowViewState.IdRef="Table_Extraction_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="40">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="52">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Table_Extraction" sap:VirtualizedContainerService.HintSize="710,4849" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="x:String" Name="OnlineSince">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Default="1" Name="PageItem" />
+      <Variable x:TypeArguments="x:String" Default="Women" Name="Gender" />
+      <Variable x:TypeArguments="x:String" Name="Category">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="SubCat" />
+      <Variable x:TypeArguments="x:String" Name="Designer" />
+      <Variable x:TypeArguments="x:String" Name="Model" />
+      <Variable x:TypeArguments="x:String" Name="Condition" />
+      <Variable x:TypeArguments="x:String" Name="Material" />
+      <Variable x:TypeArguments="x:String" Name="ProductId" />
+      <Variable x:TypeArguments="x:String" Name="Color" />
+      <Variable x:TypeArguments="x:String" Name="Location" />
+      <Variable x:TypeArguments="x:String" Name="Price" />
+      <Variable x:TypeArguments="x:String" Name="Description" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt" />
+      <Variable x:TypeArguments="x:String" Default="no url" Name="prod_url" />
+      <Variable x:TypeArguments="x:String" Default="Vestiaire" Name="Website" />
+      <Variable x:TypeArguments="x:String" Default="[Now.ToString]" Name="TimeStamp" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[dt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="668,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Gender&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Description&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Location&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Color&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Material&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Condition&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Designer&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;SubCat&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Category&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;WebSite&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;TimeStamp&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Always" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="668,3830" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" ScopeGuid="587a0dec-b753-49db-bbc8-78a7cc05a449" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634,3562" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='prod_url'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="592,168" sap2010:WorkflowViewState.IdRef="NExtractData_1" InteractionMode="DebuggerApi" LimitExtractionTo="None" MaximumResults="0" Version="V3">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/p-3/#gender=Women%231" DesignTimeRectangle="1168, 335, 25, 18" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Next'" FullSelectorArgument="&lt;webctrl aaname='Next' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Next' parentid='__next' tag='SPAN' check:innerText='Next' /&gt;" Guid="a088e7d4-7538-41c2-8a85-aba6989a3370" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAWCAYAAAA8VJfMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFrSURBVEhL7ZIhb8JAGIb3S+5HzKFA1Z2ialXFgBpqU1VsP+AwMLPMdKqZwmyYbYIGUYJYZqBizcyCoEGw1L1815ZyZVmyZoGJId7k+l7vnve77ztafkbYtw7QneoA3an+HjoQDMfWM+aK9+bUYDrv2XdhTfvoPPg5bwuqgXOOlrvIvF9D3TaYGOa8LWgNjttDXW/DCxMvBw1fYTcrKHOdwhkQT7PED3o4K53j/kOe8WGfcAgZPOjD4iWwEkdVv4GXcr5CgwgTAvHuOPY20AXtG8or0OXmGhRhThVVrT5elLOxflQpQZO0BuypCh2jozEwlpdw1+cp1IUGZt5hotxZAEoaXYHTBYMcdFNZrHCmDJ0Pp2nQM279UwhK8rqyd1rWU68r1+kkhkO0+CUe494v4AkddblHYasNpdqi0GU4huAsg8pBciyDgsgwDVyPkv7G/cxAMgCHeZuGoyE7LVe+H6R96QDdqf4LNMIKAMQxeC3rTpAAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy, Sell, Share designer clothes for women - Vestiaire Collective' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="947, 335, 45, 18" ElementType="Text" FriendlyName="'Previous'" FullSelectorArgument="&lt;webctrl aaname='Previous' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Previous' parentid='__next' tag='SPAN' check:innerText='Previous' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAWCAYAAABpNXSSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAImSURBVFhH7VQ9U+pAFH2/JD/CSqpY0W1lqqQKjVRQQZXX4PsBoZHXgA1WmRRgAzZoIZMChsJn86TAodChMJMCh+54N9kNQZ04o010UpyZ3b1f5+zeu7/Wzxt8d+QisoJcRFaQi8gKfpoID7ZSANM0HHKoB9AtFzf+bsCnMT3FYWf2vu2LeCWiieuE8aZjQD+bx/usIlXEetyEYnu0XsIxS2j3T3GkVdG7J5t/i271ACrTwJgB+3JFfgFGxwU0LgORY4Ve1UD3LpmLn8/RswyK06CqBqyhuKh7F6bpYvGmPrddwNIZdQpB/40Bzyn8UkSsiFARlT4nx0UoYJTwKbQFuLYNNMaS7Bxds47BI62p8P7xVeT3eIGaJJUgNGkxmI584Vu0dSE0RcTCKaE2FPXuXFRkDcIrEQoUgT1VQ6Xl4SG0cRFaVCjcz3BS3PpK2GNhY9FlPAzrRHYZxcSEeKwQHOba4D8RDP1SRDxN/9KclmB1XAymy1gAR3o7xYjayeFtFO7fEln7qzgxv2mbXmlkUetJnw9EHPXTRUQIsPjnodcqQS2fx36fFMGJFrct4XtosD8YyZ+Mbk23m2jUzsVLEhKEdtqJYm0mcvP225MconaOY+wCrHjWqB75TcL1F0TwwXbEcDJWRnsqC3DQjOiKmCdxtnOr28HmsSdj6Rdg0inTsDP65ilnq76N8Wdol8X3r8mPJMqdEPF9kYvICnIRWcEPELHBCzCgiuc2HrJAAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/p-3/#gender=Women%231" DesignTimeRectangle="409, -5888, 799, 6108" DesignTimeScaleFactor="0.7400000095367432" ElementType="List" FriendlyName="'UL'" FullSelectorArgument="&lt;webctrl parentid='__next' tag='UL' /&gt;" Guid="683d91dc-253f-47b5-bbe6-4f68083e5bc1" InformativeScreenshot="5c3d67695867fa402960e5567ec15caa.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Buy, Sell, Share designer clothes for women - Vestiaire Collective' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="592,3262" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="558,3134" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="516,3042" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+                      <TryCatch.Try>
+                        <Sequence sap:VirtualizedContainerService.HintSize="478,2795" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <Assign sap:VirtualizedContainerService.HintSize="436,71" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[prod_url]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">[CurrentRow("prod_url").ToString]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="436,93" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[prod_url]" Version="V3" />
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'description'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_32" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Description]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="627, 429, 110, 16" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Trench coat'" FullSelectorArgument="&lt;webctrl class='product-main-heading_productTitle__name__x_rnE' parentid='__next' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='product-main-heading_productTitle*' parentid='__next' tag='DIV' /&gt;" Guid="aadb626e-25fc-4d79-81e4-7717008e19f3" ImageBase64="" InformativeScreenshot="c107a136fba48cc612c99c70218d3534.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive" />
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'price'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_33" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Price]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="767, 506, 373, 21" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'$200.24'" FullSelectorArgument="&lt;webctrl parentid='__next' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='P' /&gt;" Guid="2b64254a-a7cd-4507-aad6-6372eac9a4fd" ImageBase64="" InformativeScreenshot="6933be1b165d0c02d23fbf175e10a15f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="1114, 513, 94, 15" ElementType="Text" FriendlyName="'Listed by Eugénie'" FullSelectorArgument="&lt;webctrl aria-role='button' class='product-details_productDetails__sellerText__link__PFjom' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' aaname='Listed by*' check:innerText='Listed by*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGIAAAATCAYAAABr29hqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOKSURBVFhH7Ze/S+tQFMffP5shyx3ukiFLhjpkSIcMviFCOrRQRxUUbKFCLRRpC0WqEMQiIhYJRSlP3L7v3OTmV5uUVJFXHx2+cHt/5Zz7ueec219/3j+w07/XDsSWaAdiS7QDsSXagdgS7UBsiTIg+rYCu5+dEGhYA3dHq/1peW3st+7yxwr1gCNdx9G0bH9ZXcFWVDDOwVMyW085czeT37fBjUN4b/njGZU5N6lyIMqIDFTsq/yxQn0nCBv93LGvaA6vP4Ln5419TeVApA75vlUFZyyU1ca9GH9sw2QqFJX6eA2DoO8CNlehcgbG9lC/mYd7+SO4OvUzuqW6iQovAqHBdszgO6rKYbUegjGvrkGrJ5E3qXMYpy/x71DrQCxDzs4N/FNFNNH367+h6Sehj/4t6pXQbsZorCOja3oCXbPhWBrZKvw1cR7tnb6cReulNgQhnDDRkTdi0jRoQ3nAmYgInW1GBs16sLUDjN8X6FoqrI48uNkFLKUIhALNvcWr+O3TembgdEbt2RkMJvYS867hsCo6K2lCHK4CJaPoO2tAeA1oWg2TYL8FJq4GJQCxoLOhw7uUvr7doanv4VzYI0DQ3k1vEYw9nxpgznU4Lz6TNevFb9KGIBYYOByqXoV7fIHxNPx4dg61Z21Ucg9i+eAW6FhFILQEJCmxTcBkcIbUHh+AWb0QVkafi4jn1h54/TaZe9OgqBUghN3L/kh7gog4DKNGKH0OcXvNerlu49Qk9Oo/YTI8g0MpxjgOU8YKiPjWRmvmdGDCoPRNeMF5pQgEp3SW9HXTtg0JgN2jS6GFQOJ1kT4PIr7NQgJ0DCJ7g0N/qC1AROlLqBBEwXqpDUGMsK/SjY6K1SX178tXQQbWC04NloTi9JBuTQMetQcOg96U8ET/mtTEaD9f/A5SUxXdOJIo31LEaEG6i/rSWgdCwE/8fCYfWDQ3SHs2uoF/c4LPZGpasjttTykQa9bLdSsgcsMntaFPTzI9ehJSkeo8yvVTcoKKXFKsexQxVKhFsebVpIBlinUNjlmcmpJircMdSqhSokini3ZWAkTx8/V13IAeFGQO3T2AmYKWLtaWY2eK9ZElCq1Qyp6SIArXS2VA/ByJiJPFO3f8k6LL4x6Pwigk+Z1qNlV9o34eCHoqV0TkOaOcIv1VzTFwdYrA8HnODIrub/jPkKcfGhH/n3YgtkQ7EFuhD/wFznvFV74ZSF8AAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,346" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,258" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Online since'" sap:VirtualizedContainerService.HintSize="358,168" sap2010:WorkflowViewState.IdRef="NGetText_34" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[OnlineSince]" Version="V3">
+                                  <uix:NGetText.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="442, 331, 67, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'2022-10-27'" FullSelectorArgument="&lt;webctrl aaname='2022-10-27' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='SPAN' class='product-description-list_descriptionList__*' /&gt;" Guid="66227d26-2ab0-42b3-b1be-8108fdbb7b2d" ImageBase64="" InformativeScreenshot="546a2bd40a3b64c7aee9081f6cc792b6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                      <uix:TargetAnchorable.Anchors>
+                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                          <uix:Target DesignTimeRectangle="363, 331, 72, 17" ElementType="Text" FriendlyName="'Online since'" FullSelectorArgument="&lt;webctrl aaname='Online since:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Online since*' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Online since*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEwAAAAVCAYAAADsFggUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKESURBVFhH7ZatlrMwEIa/K+EmcLi6OlwdDodbV4frFeBwOFwcDofD4epwOFzkuzMJFMJPW/Z09zN5z9k9nEBmJs9MZvoPVodkgR2UBXZQFthBWWAHZYEdlAV2UGtg8g4RBzi5DhzHxSlKUNzl8PKVaiROQv9JnUAYCnRq/Tc18/kHMoFJcu67iPIGvV5AVyUIvAuyRi280N8G/z9kAGvzAOdbTZhMySqG+1VoiKpyMhRZpKvQCwnmuGOnwp7uIbUF4sCjinbgBTHKdlg31KNKAnj0jeOeEFEGtYV5kvj5BlHGlGT+7oJ4bqwtd/z0aMbYDNtkMaG1ZCqBGbAOReSAeK0lK8TOFSUT48PTVY1Eq4z21Q3ncwpdgE+A7e5pkPo+kkrXdE8V7fvju5mahJI22KO2kQUu9DmWwBz4SaWT2+bkd4h76admPxnu/Fxe4UUCLQcnW4jIw1VvWskAJsIA+WZ2OZAQgqPlw7vJdCAFYx7wDrC9PQzC6HU9iq/LOo4mxdm/UVX0OvuyR68elsAiFA9js7hXfiTaukEnuVBG+IPYV1w9qmyun1XY3PG7wPb2UKb5iiz/jAMM6qoM19Cna+khuObQt3oJbHxmzYCxny2jFJUI1/4dA+6kVQ9zN8iue9gHgXHmd7Jp6FFRrB51esE55Zp9E9iqwjpUmSDoXCgbFb0jAxhkM01JFdzGlPw0MNVbeAjoniFbgcgb+84kSX2PDzye655dEKhTvgmMbsnNXfSwIFf2uIf5cUnXU72h4eLDV8lYywTGevU77OPASIvpJTZ/98lpkvGVjAX0Z28CI8m72JmSM9s8JdNa3ybSkylp9Y4ssIOywA7KAjsoC+yQgG+R3FSFKh9zswAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                        </scg:List>
+                                      </uix:TargetAnchorable.Anchors>
+                                    </uix:TargetAnchorable>
+                                  </uix:NGetText.Target>
+                                </uix:NGetText>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Category'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_35" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Category]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="424, 369, 47, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Clothing'" FullSelectorArgument="&lt;webctrl aaname='Clothing' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='SPAN' class='product-description-list_descriptionList*' /&gt;" Guid="a4ad6a79-e622-4c38-bebb-e66ec02b569f" ImageBase64="" InformativeScreenshot="3458d75a950a6e7d06087af73589f925.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="363, 369, 55, 17" ElementType="Text" FriendlyName="'Category'" FullSelectorArgument="&lt;webctrl aaname='Category:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Category*' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Category*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAVCAYAAAD4g5b1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKzSURBVFhH7VahtqNADN0v4SfG4epwOBwOh8PhcHwBDofD4cbhcDgcDofDIe9LZoAylPa9U7Hd7es9h54ymWRyyU3gD34RPmTfFR+y74oP2XfFLdmpRR65sC0LlrjATyr002J7iBFVYCFrl9t/ECbZuUXmuohlj1kvoJcxXDdDpxce4D8jO5Q+nLxb7lbMaDMPabPQ7wqEFwGLKm+7MapBr7cZKYHVwFdQEXXCIJH4tt7rJ6gHtVVhajL4tlZPVNYoggCVcmIjqSu8QKgzIhTbk6ZiWBlqyiGwaf/QIBU7P0KXOwh4YawQWKZtR/YnlaHDKHi5JD3VCUQoNbEb/w45qSRrdA8wOdfNaZXAiYiQklUW9EUIsSWt/dJaR536EqEdo1ZhmKyAl9bLmfyQhSanQL6OSXCPA1l/I3KOGdO0PmX632Zw1ioeyXYZxGZjTJCRp+KPkshlOwXNDZK1Cjd+mlAoeYXJHshQDiKSFJ0wlPAOvnsYZGV4Xtl57NAOHG5GV0RwbRuu5yGKwvtkKYlN1ruL7WMV7KrB2JFgv0MS1/1axqaVqxlBUnrchmZcEz/q2ToWume7HI5foF8s5pM8qWzSkPctdGV3KU814keVTS3ESsdnZDkth+wdnX9fwgyD7DaNq07Lgn67iqfx0mucyEp2HiBjVw0jrXytjHTLhHsvoOGiI81Dde09Jmdfe7bNKM4mz2PP0jASCfR8PCerikBEg1XOd2CSZZy9Z7fyDKgTX9nEJUTetigDmsxLlUYZab+1akNtTOPqGgiTmqj6jKgsrpVVxt00NvzukFVSthCxllc8nsZ/EzTcDH0ziXXiPgMefrpvH+E1ZKnXfSfF8lai11JKs6Bc2uEJcLxvJMx4UWUpP5nojwp6b17CHO2TVVUfM7aP/PtPvNeRfQV+EVngC9TGAVBMzeNiAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Sub-category'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_36" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[SubCat]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="449, 389, 73, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Trench coats'" FullSelectorArgument="&lt;webctrl aaname='Trench coats' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='SPAN' class='product-description-list_descriptionList*' /&gt;" Guid="b4800825-4887-446c-8cec-0cd8e1b161f7" ImageBase64="" InformativeScreenshot="77cf97b256cf45eb9175e3a8bf82c516.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="363, 389, 79, 17" ElementType="Text" FriendlyName="'Sub-category'" FullSelectorArgument="&lt;webctrl aaname='Sub-category:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Sub-category*' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Sub-category*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFMAAAAVCAYAAAA6s9JxAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOWSURBVFhH7ZevkqQwEMbvSXiJONy4cbhxOBwOh8PxBDgcDofD4XC4uHG4cbjI77qTwCTMzO7d1lzd3RZf1dQCIUn3L/2H/YFDb9MB8406YL5RB8w36oD5Rh0w36gD5hu1g7lgqjNEYYAgCBDGOVq52LGPNVUBqsne/ClNFYKkw83e/mvyYF6bCFE54KbM/SJbpCJB9wvWHzA9mApD/ghkHmp00tDdA+P7xJLm67LrkZ0ERXWIuBgw65EXmgcUcWgzoMCwvTxjKGKE9DwQJ8TVSPlCunVI+Jn9GTsWyCbFSZh300aSF1bqijY7Qej1K4x9iWAzXuHaFYg5A3kPx9Zbl5BPE9lwgaD35zbWfzctA3JRgZ+wz/c1d5F561O9cS9nLJtVd30GM4hoE+M5GXNG3L7CKVFHEarRlJCFIi6KGlzpmp05lxYgAWligUryDWkXmcuQI0w7zGyrmtGlIfKBZyp69YyIjDXmDCgjOmRrvJnX4rraWlJG1mYT3l+EGVozyA+QWHgsnuvBdfTQgBaKmLbMkUQhxClG0V2NQaTPYBpHrOYWF3L8KU5ZQXjpqjBP0pQXtWwHqRYClDl7ejBv6FMC7fola5yLkVaTqESK/r4BmXOxMJ/Ms8AYp4bpD6JLzjCsFcZiN9fRA0xPyo+wz2A+GBjwibIxJjX5p99nKK8s0ul/Qni60GHkyOLXMN11t58en1Dpve9iSCvMLtn3gfv7Js29QSx9hjPTVCPK0F/XlQOTTzOHG1xajuMMrHRWmkofpmcER0naW8d3eojMG8amg6SoHHKBYjOCI+GjyLzgeSVhX3xgsj6/jsyZDv5cb5G5h0k0kfE47R96E315DUhWfjc3dUhskckGrfVMkQEpFX4XJtdMUwbNvKzfn4wVn7DY1cy4pVnG0RXmMtWIaY/tAO0hrPy4fkXUPIy9C0a239Y+WdM1OW7MMbauQfFQM53sewqTVukzep5ENt2fa5fm/ncm18y8lcYglppQ6w4scEob9M19Yx21HaXoxXbztQu/kLp2T7u5kg3S7YuAonUoqbPbKFPUuPT6a9RRALjdvLbwtGb03JH1+hXaek1zlt/N3XnPYZoDCGz0rtIB5ETqxzXzP5ZaFkJ2F0PSde+rorIVfzL/m8KkWlsKJJS6GiiVqzYRKEcX7++Ia/fHKc76tpFJ/76hSc1HexCaT7wvodRfJVTWshfN1NH3hfkXdMB8m4Cfh5VWOJH702sAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Designer'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_37" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Designer]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="422, 451, 33, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Burberry'" FullSelectorArgument="&lt;webctrl aaname='Burberry' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='SPAN' class='product-description-list_descriptionList*' /&gt;" Guid="d099c293-9504-4822-bd8c-1c42da2304af" ImageBase64="" InformativeScreenshot="fdc30a74ffa0f0a6419e8c236f06cb84.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="363, 451, 53, 17" ElementType="Text" FriendlyName="'Designer'" FullSelectorArgument="&lt;webctrl aaname='Designer:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Designer*' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Designer*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADkAAAAVCAYAAAD8dkbIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAItSURBVFhH7ZWhlqswEIb3SXiJOBwOh6urw8XhcDieIA6Hw+FwcTgcrg5XF4f87ySEEnZblrv3tnu227+HcwohmXz5Z4Y3/AK9IJ9FL8hn0QvyWbSC7IQHz1suFnAIOdjRL+pcI45rnO3td+gDZFwv2xkHiTxiSKWyT36mNiGN+gJhWKC3t6ovwQNGTjMEvEQ/2oHxhCoJwHQW+EdkcwasnFRoxRG+yZIElSyXMfNeiabkCJheI0Z5WXwjrl2/kxkOTKCjn6D1RWfHSZ9D0qTc42j0YyWR+hz1oCOMGGoOP5W0dYrVcIS0solN72UshlnKgTzXMRivYfDVCSVnYC4kAfB6MGuoNl8OdyOumcd8JNVpur+iXZDCmzasQZh7RLSFIszQUmwlUwKo0J8NJkalJuAL5BkNQYk5JUhjm8FzIcmJy7CB1s5sx53nuaPv9VdOaifcxjRd1jE6x1MjkBwoZVkALtrJMQeyjud3rTqxhpz/a7mQW3Hfz7uifTV5rMyG9YkeqhvddrTOGRFQ4k0Ny4E0TjpHrt3fBbkV918h5+6ambwg6dqIMkibkqoViKKpbobqiDC3NUmuypQh1/OcTWgo/1KTVAYRObIDcivulyDdlPCjBEW3Ludx1eUKLMMDZDZ1Tk+na9EtjeGyCYW+jJfuWu5zUutm3A+Qn3TXu2uV0iRdk3OXvKMeCjmldGuh6JuZhzjeqrX/qMc6SSndXEvpO+vBkN+jXwAJ/AEtq1tzhcGzDgAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Condition'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_38" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Condition]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="427, 427, 113, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Very good condition'" FullSelectorArgument="&lt;webctrl aaname='Very good condition' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='SPAN' class='product-description-list_descriptionList*' /&gt;" Guid="e02333b2-aa42-4280-8c75-6b5d0fee1ffb" ImageBase64="" InformativeScreenshot="c17e857216394b7fb5662e4db8c93177.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="363, 427, 58, 17" ElementType="Text" FriendlyName="'Condition'" FullSelectorArgument="&lt;webctrl aaname='Condition:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Condition*:' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Condition*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAVCAYAAAAeql2xAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI4SURBVFhH7ZWrtqswEIbPk/ASONx2OBwOh8PV4XA8QRwOh4vD4epwOBwOV4f890wSLqHsrn3pUfCv1a6ECel8c+s/nFQX+Nl0gZ9NF/jZ9Az+aFHcAniOA8f9QJRJ9A9je6NGGcMRrVq3woFZ8gZOLDGaLZ+L5bx7n2zwqYUIAqR1j0k/QF+nCAKBTj94m7bglnbg/0sW+FBF8IvO7GZN5EuI/G7IuSKSD7hUEV5wQ7lEhILm5JBNhsjjagmRNYOxkaYe1c28F2Uo8oOMjxIxV5r58DM745QIOd/P1dhg/gV1rqxRzr7F5ZIsFeRdMDfgI2S8KblDdSioIvJGX/HoKyReika1AoM7CMQdajtUBDHbOHg+2VptGxtkPjm/B9ebL0v90aTwksq03ogmDxCYRCk4N4EcmPaBe+4fJHHVDjxCtUnSkzoBdxe5VrhIan7C4AnUUon3MbTPHQQ5tdo4LuEPwUfUiWsnhivEpTZUyxiuWEFVIKzDtizwOjnO+DR2aAcKMzu1O7A6xqCCvmdtwfc227Hvgst4vm/Weu96TusH4F/3eJO6usePMp47SFU9vwLnjNtOd4X/94wPlHG/WDL+a/BlqstO9yJ9d5Knur6cAeweL6nUMui59wqcQakfyRF1Lzl889xjcBNca2iZS556PPMRmd78Gzjr6H98Htys7VSn6SwX42twokWdheY9gXudH4NPFNyQgmLetYHsqZ4UJpCkV+BqvavUZ/CT6AI/my7wcwn4BMV/BwUGUWf6AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Material'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_39" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Material]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="418, 446, 38, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Cotton'" FullSelectorArgument="&lt;webctrl aaname='Cotton' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='__next' tag='SPAN' class='product-description-list_descriptionList*' /&gt;" Guid="381a3304-e81f-4076-b66a-2091371fc891" ImageBase64="" InformativeScreenshot="35e6e3d870f630cba40c7813adc5767c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="363, 446, 49, 17" ElementType="Text" FriendlyName="'Material'" FullSelectorArgument="&lt;webctrl aaname='Material:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Material*' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Material*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADUAAAAVCAYAAADmSqZGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI2SURBVFhH7ZStkqUwEIX3SXgJHA6Hi8PF4eJwOBxPgMPhcDgcDofDXReHwyHPdn7gBqbm7tyZWsEUp4oq0pCmv+5D/uAX6oa6im6oq+iGuooOUGPpwfMy9IsN7JJoYnqWtJht5FPNLRKvxGiX72lE+ZW96hsvavkAFUUR0u5EJRvEFI/+O9QX9S5U2TTgaQcXSzYxcoq7iWSfgwdqsj5CXmLQG1SnVcxcSWveXqYaIvTNu6LGtOow1ZbQOyP6PIZfqjYcJ7Xu+zwELEMr9417LSrH2UEfoUayGk9g6yFNqFiBQTrdUUkjimmQFY+aU1GTWphn7qSWHlkgbEErZCsQZL1umirID1I0j62FLhTd+wkaqReUJocvuuf335oUZTQdtFumCqwYsB4SrVgW27V1oUJTeLrTpBPU3Ak7hU3UpCjHQNs11OGZC+V8Q92P5dP+34HC0iHlDR0PiomhMBU4iSRZhiMMQsRxgizln0MpeziWNJdxwqF5WkeoqU7BggAsjpGm4odQZI6OCm2ktZ5qmJNo6TP4ubGQ0jrkLycVbx466SUUOSTiNR46TlKH1c+gTOFcCDC3WJtIW2qDWkZUnH7mYnuvg/CKHUr/UyxHPxsrLUMJxioy4b+gSvgb1CrRZUwfCLo934Wi9iOn02pfu4nWCbUI4atTiedopx4FnYSmwJmmHGibbXufp5g6/SqMdsSv7WcsHlAePxSoxhFNQjlUUrfByt4nwAPUb9ENdRXdUNcQ8Be72SnL/22EDQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Colour'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_40" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Color]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="410, 466, 32, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'Beige'" FullSelectorArgument="&lt;webctrl aaname='Beige' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='SPAN' class='product-description-list_descriptionList*' /&gt;" Guid="dc16080e-f7a4-44d1-80af-db5f4876cf3e" ImageBase64="" InformativeScreenshot="ee58d4eaf1e0dd7466773c293737b66d.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="363, 466, 41, 17" ElementType="Text" FriendlyName="'Colour'" FullSelectorArgument="&lt;webctrl aaname='Colour:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Colo*' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Colo*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC0AAAAVCAYAAADSM2daAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVEhL7ZShkoMwEIbvSfIScThcHa4Oh8PV4ep4gjgcri4Oh6vDxeFwOBzyv4SlXKCQ3tzNcdMZPsGQ7JJ8SZZ84A05pPfikN6LQ3ovnqW7CtklgMcYGPcRXiXqbow5qSCY0M+/Zy7d64mDAElRo6cO1EWCIBBQ1OHgn6SbW4hTpsbWgx6VOCO9j9bmJGIfXJ+EF1yQT6tZSG/m6UzBIKzVmXYk2+ldlAp55A19rYzAIgmKEpZ0CxnNB3tGIdMnkZY0RFffEHsJyqF8bGlX3mtpfk4xfrrKQjrErRmbaygBvlh1JTjiwvRY0s48EnNJP963mEkX8fpO961C1ehtqgTYIsEcH01iSTvzSMwlveZg862aLhNONb22gylDMpz7i52e8kgstaV17MfS0+0hFWj4Dkqa2yPTVWpY1mqOiF9B/6irpu08Hc1OOKX3YY6+kYj5b6QNa/f0149P8cetEF4hp6AtrdnM0+jNyUIPjHH4cY4i3y6dF7fH+3BI78UhvQ/AJw4S6VYPezu7AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Location'" sap:VirtualizedContainerService.HintSize="436,168" sap2010:WorkflowViewState.IdRef="NGetText_41" ScopeIdentifier="587a0dec-b753-49db-bbc8-78a7cc05a449" TextString="[Location]" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.vestiairecollective.com/women-clothing/trench-coats/burberry/beige-cotton-burberry-trench-coat-27693590.shtml" DesignTimeRectangle="421, 504, 175, 17" DesignTimeScaleFactor="0.7400000095367432" ElementType="Text" FriendlyName="'France, from'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;ul&amp;gt;li&amp;gt;span' idx='20' isleaf='1' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl class='product-description-list_descriptionList__value*' parentid='__next' tag='SPAN' /&gt;" Guid="24013685-23ca-4573-b737-1bb6c814b805" ImageBase64="" InformativeScreenshot="ac746753131169c77f323a89c527d433.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Trench coat Burberry Beige size 40 FR in Cotton - 27693590' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="363, 504, 52, 17" ElementType="Text" FriendlyName="'Location'" FullSelectorArgument="&lt;webctrl aaname='Location:' parentid='__next' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Location*' parentid='__next' tag='SPAN' class='product-description-list_descriptionList__property*' check:innerText='Location*' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAVCAYAAAATtC32AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHuSURBVFhH7VQt06MwEL5fkj8Rh8PV4epwcXE4HI5fEIfD4eJwuDpcHA6Hi6t8LhtCr7Rcp3fXd+Z4h2cGhs1uln326we+OQ6Ce8dBcO84CO4dK4K9YhB6CtJXY4IWDKoPInooptz7s/iPCH4N/oDgFYMukEYMjMdIiw5j0JDO1BIxn3WyNu4kaEwNGXMwxhAlOfQ4a+hfdOYfoR3dhwraHpWMwf29DLVZPJJdCd0tsZxRdEskpFsn7W2CtssRyQaDJWlCVyZIKnOn05hjH6FlhLwjQ/dDLtCE/1sXFJetu0141aIGVZKg7GZLOzSQUQ7vMpBI1AVeHBsItuie8SbBCa3k63aaNARXLpQNnR1w8Zm4wtpbLV1RFE6+WoQXBI0Cv9nN6BWHbOmE7CT8pwfJAr9rvLcJavHoZAloS7eAWjdDEkVIzmdkmXyPoEsEW2WM8ilCbHd2Hh8i+FSl0VXwVG1W8Go0KpoLU+GU1hjCObXT+W8rWLJfbf95ghszWJyQhuEam9TN1noGy4sTKNCF4HVEmyd+ocy3KDEM5RbBpxms3TgUIJf/TPC22W7P4my9RWXVz0PuYdFXW1t0dIlIETk/PJao+h6NcBs1lG1qM6+b5YfA77doWkAPyyy/IkjfL7bod8RBcO84CO4bwE83KTV4QJm+sQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
+                          <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{Gender,Description,Price,Location,Color,Material,Condition,Designer,Subcat,Category,Website,TimeStamp}]" DataTable="[dt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="436,201" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                        </Sequence>
+                      </TryCatch.Try>
+                      <TryCatch.Catches>
+                        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="482,23" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ActivityAction x:TypeArguments="s:Exception">
+                            <ActivityAction.Argument>
+                              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                            </ActivityAction.Argument>
+                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,99" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[&quot;Got error on this url:  &quot; + prod_url + exception.ToString]" />
+                          </ActivityAction>
+                        </Catch>
+                      </TryCatch.Catches>
+                    </TryCatch>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAExSURBVDhPY/gfpf6fEkw9A96Eqv3f4qaCgo97q8IVHgWyYeJvQrEY8A+Ii02V/svJyYGxPBDfDVSDK7wXqPrfQFn+f4mpIlgtTBzFC4+D1f4ryEMMAGGQJmT5XGPF/98jEHwQxgiDOH1FuAHT7ZTh4u+AXpxiq4SiFoQxDNjprgI3wEFdAS6+0FHl/zOgC5HVgjCGAb8j1f6bqcrDDbngC/FGmxWm7SCMYQAI91gjArPOXOn/NX/V/+tcVTDUgTBWA54CnaoIDUx9YMiDDEQPPBjGagAIR+kpwF1RbqaIVQ0I4zRgO1JgnvJR/f83Uv2/t5bCfz0l+f8PgxCBidMAUGCaqsgDY0IeylcHawYZCAtYEMZpAAhf81f7fzMAofgR0ObLfqiJC68BxGAKDVD/DwBCOU4O8yPtYwAAAABJRU5ErkJggg==" InformativeScreenshot="bff13b5f070a158321346e99cdbba19e.jpg" Selector="&lt;html app='chrome.exe' title='Designer Clothing for Men - Buy or Sell Fashion Clothes online! - Vestiaire Collective' /&gt;" Title="Designer Clothing for Men - Buy or Sell Fashion Clothes online! - Vestiaire Collective" Url="https://www.vestiairecollective.com/women-clothing/#gender=Women%231" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="668,780" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_2">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,684" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="510,594" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="F:\PROJECTS\JK_SOFT_PROJECTS\ui.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,264" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Append="True" Destination="[Excel.Sheet(&quot;Sheet1&quot;)]" DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="434,174" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="True" Source="[dt]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>

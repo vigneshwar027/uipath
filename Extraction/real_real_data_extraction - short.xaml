@@ -1,0 +1,229 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="real_real_data_extraction" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="644,2064" sap2010:WorkflowViewState.IdRef="real_real_data_extraction_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="38">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="102">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="real_real_data_extraction" sap:VirtualizedContainerService.HintSize="552,1999" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="url_dt" />
+      <Variable x:TypeArguments="sd:DataTable" Name="result_dt" />
+      <Variable x:TypeArguments="x:String" Name="material" />
+      <Variable x:TypeArguments="x:String" Name="gender">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="brand">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="category">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="subcat">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="timestamp">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="prod_url">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="color">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="price">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="cond">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="desc">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="info_tree">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Name="location">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="x:String" Default="RealReal" Name="website" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:BuildDataTable DataTable="[result_dt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="510,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;info_tree&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;cond&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;timestamp&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;  &lt;TableName /&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[url_dt]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="510,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="F:\PROJECTS\JK_SOFT_PROJECTS\PLG_DATA EXTRACTION\urls\real_real_women_accessories.xlsx" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="False" DisplayName="Use Browser Chrome: Women's Designer Shoes on Sale | The RealReal" sap:VirtualizedContainerService.HintSize="510,1663" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" Timeout="120" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1435" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[url_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,1178" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="rw" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="400,1050" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="358,93" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[rw(&quot;New column 0 Url&quot;).ToString]" Version="V3" />
+                    <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Stella McCartney:'" sap:VirtualizedContainerService.HintSize="358,168" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[info_tree]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/men/clothing/outerwear/stella-mccartney-w-tags-b5ljj" DesignTimeRectangle="25, 356, 916, 47" DesignTimeScaleFactor="1.1100000143051147" FriendlyName="'Stella McCartney:'" FullSelectorArgument="&lt;webctrl class='breadcrumbs' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='breadcrumbs' tag='DIV' type='' aaname='' /&gt;" Guid="f4b9c1d0-59f3-4a8b-a125-028352adc901" ImageBase64="" InformativeScreenshot="0ca9664372d4cac3a3133ab77c14abe2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text 'Good ValueScore!'" sap:VirtualizedContainerService.HintSize="358,168" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[price]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/accessories/eyeglasses/saint-laurent-cat-eye-eyeglasses-emack" DesignTimeRectangle="941, 245, 400, 1193" DesignTimeScaleFactor="1.1100000143051147" FriendlyName="'Good ValueScore!'" FullSelectorArgument="&lt;webctrl class='pdp-content' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='pdp-content' tag='DIV' type='' aaname='      ' /&gt;" Guid="bf220fca-0c7c-449f-81ae-0e3f51ce02f7" ImageBase64="" InformativeScreenshot="8e0587e716e6487038b6d2f08b9ba188.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <uix:NGetText DisplayName="Get Text Cond" sap:VirtualizedContainerService.HintSize="358,168" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[cond]" Version="V3">
+                      <uix:NGetText.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/men/clothing/outerwear/stella-mccartney-w-tags-b5ljj" DesignTimeRectangle="1292, 413, 48, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="Text" FriendlyName="'Pristine'" FullSelectorArgument="&lt;webctrl aaname='Pristine' class='condition__text' parentid='pdp-details-Condition' tag='DIV' parentclass='*active condition*' /&gt;" FuzzySelectorArgument="&lt;webctrl class='condition__text' parentid='pdp-details-Condition' tag='DIV' parentclass='*active condition*' type='' /&gt;" Guid="ee76909f-bbff-4596-9209-310169196633" ImageBase64="" InformativeScreenshot="26896eb9959469df124968b0a4e6675e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Stella McCartney w/ Tags - Brown Outerwear, Clothing - STL162902 | The RealReal' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" />
+                      </uix:NGetText.Target>
+                    </uix:NGetText>
+                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{info_tree,cond,price,rw(&quot;New column 0 Url&quot;).ToString,Now.ToString}]" DataTable="[result_dt]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="358,201" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[result_dt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="434,125" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="F:\PROJECTS\JK_SOFT_PROJECTS\PLG_DATA EXTRACTION\datascrap\realreal_log.xlsx" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALEQa0zv0AAAACBjSFJNAACHDwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAABF2lDQ1BJQ0MgUHJvZmlsZQAAKM9jYGDiyUnOLWYSYGDIzSspCnJ3UoiIjFJgv8PAyCDJwMygyWCZmFxc4BgQ4MOAE3y7BlQNBJd1QWYxkAa4UlKLk4H0HyCOSy4oKmFgYIwBsrnLSwpA7AwgWyQpG8yuAbGLgA4EsieA2OkQ9hKwGgh7B1hNSJAzkH0GyHZIR2InIbGh9oIAc7IRA9VBSWpFCYh2c2JgAIUpelghxJjFgNgYGBdLEGL5ixgYLL4CxScgxJJmMjBsb2VgkLiFEFNZwMDA38LAsO18cmlRGdRqKSA+zXiSOZl1Ekc29zcBe9FAaRPFj5oTjCSsJ7mxBpbHvs0uqGLt3DirZk3m/trLh18a/P8PAN5BU32YWvgkAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAD1klEQVRIS+2USSjvbRTH/xtTilCGEMotkUxJKDaGTGUtkZDItJBELGwQC0MkomSKdOuaMhUZSooMcTfmeSbz/H8/f0e/V+/GyrtyFk/nnOc8Z/yeR6X+ZvoJ8CX9BPiS/pcALy8vnE9PTw8PDzCvr6/K+fj4yPn8/PwfvZzX19cKD4kfOSHevr29fVRwf38vjBDBPjPcKl4g8ctjESEMrq6uFA3G5+fnwqvE+uLiYn9/f2dn5/j4mDqwRnN2dnZ5eUn6p6enmB0eHh4dHUkklPJwfX2dEzNuSfng4AAejUKaCrKysjw8POLj46uqqrKzs11cXJKSkuALCwtzcnJcXV1tbW3z8vJyc3M5ExISOjo6pOKVlZX09HQHB4ewsLCysrLMzMyUlJSSkpKlpSVud3d3NQGohTft7e0IUFtbm7a2dktLi4hUExAQ4OjoKHkh1tbW/vr1q6CggApo4NramrGxcWJiotgjEsze3n5xcRERG9X29nZjY+Pt7S3W0MTEhJaWVkNDA7xM2M/Pz8zMjHYp07O2tqZi4ZeXly0sLNLS0uDv7u44Ozs7dXV16cT7vVqFlrAi4GJoaIjruro6RGLQ8YiICDs7u83NTek+k6Rpzs7OMoOZmRl3d/eYmBhlwqRraGhYVFTEnPDwgSJci0VXV5eJiUl9fb2kf3NzExISQgAZ5t7eHpMg5aamJs0ztXpjY8PS0pImS31zc3OBgYFubm7gRRLSBCCUeMdoeHiY+DRa0URGRlpZWdF00vTx8YmNjaW/BOaWBKmMkfj7+xcXFwcHB/v6+lZUVGxtbSkFqRROUh4YGNDR0WHIkhEQCAoKwsXCwsLIyIiRkRHxPgMRPbfEBqbJycmmpqbV1dUfd+8N0AQQ10I9PT0MuaamRgkcHh4OimgOhba2turr6wPNk5MTcMG6UAFOU1NTsQQvUVFR5ubmQBGRW86Pr4LHgoHe3l4DAwMcwTNG9N7e3syAnsKjrKysVKlUdAweWl1dtbGxiYuLk+eYAWs0g4ODiKyLSvkkaCgnIGMPqEAZTGhoKKvEhsNL68mXJFg6+NnZWScnJ2UPyJUJeXp6spuybv+2iCUCcxkZGbQI5MzPz4P9P3/+kD4h8/PzAcy7Ew1FR0czj/Ly8tLSUj09PZA6NjYGbMTV+Pg4r7y8vEZHRzUtEkRDU1NTfX19IJVRT05OEgCL379/A63u7u6/f/+KGXqIaTU3N7OYJNHf3z89Pc33JQY0g1zpMxjRLJpoIUGOdEZQrMxffvLPjBgoorylsaIX4vZj0b6PfgJ8ST8BvqRvDqBW/wP7i5TOSBYcaAAAAABJRU5ErkJggg==" InformativeScreenshot="60b4697450652e6054e59266ed58d658.jpg" Selector="&lt;html app='chrome.exe' title='Women&amp;apos;s Designer Shoes on Sale | The RealReal' /&gt;" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

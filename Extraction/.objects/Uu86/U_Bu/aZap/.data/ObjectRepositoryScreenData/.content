@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="w5rnNJHhqEa9xUm249Ktjw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAExSURBVDhPY/gfpf6fEkw9A96Eqv3f4qaCgo97q8IVHgWyYeJvQrEY8A+Ii02V/svJyYGxPBDfDVSDK7wXqPrfQFn+f4mpIlgtTBzFC4+D1f4ryEMMAGGQJmT5XGPF/98jEHwQxgiDOH1FuAHT7ZTh4u+AXpxiq4SiFoQxDNjprgI3wEFdAS6+0FHl/zOgC5HVgjCGAb8j1f6bqcrDDbngC/FGmxWm7SCMYQAI91gjArPOXOn/NX/V/+tcVTDUgTBWA54CnaoIDUx9YMiDDEQPPBjGagAIR+kpwF1RbqaIVQ0I4zRgO1JgnvJR/f83Uv2/t5bCfz0l+f8PgxCBidMAUGCaqsgDY0IeylcHawYZCAtYEMZpAAhf81f7fzMAofgR0ObLfqiJC68BxGAKDVD/DwBCOU4O8yPtYwAAAABJRU5ErkJggg==" Selector="&lt;html app='chrome.exe' title='Fashion Women Clothing, second hand Women&amp;apos;s Clothes on Vestiaire Collective' /&gt;" Title="Fashion Women Clothing, second hand Women's Clothes on Vestiaire Collective" Url="https://www.vestiairecollective.com/women/#gender=Women%231">
+      <imageRef attrName="InformativeScreenshot" originalValue="14057ab5c235bcd2ba9eeb967ea5d909.jpg" xmlns="">0E11DzR5D_0iJ7jkF0Kelgg</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

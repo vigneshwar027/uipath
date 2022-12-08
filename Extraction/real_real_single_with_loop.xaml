@@ -1,0 +1,212 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="real_real_single_with_loop" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="673,2079" sap2010:WorkflowViewState.IdRef="real_real_single_with_loop_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="58">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="real_real_single_with_loop" sap:VirtualizedContainerService.HintSize="628,2014" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Name="url_dt" />
+      <Variable x:TypeArguments="x:String" Name="url_from_web" />
+      <Variable x:TypeArguments="x:String" Name="url_to_be" />
+      <Variable x:TypeArguments="x:Int32" Default="1" Name="page_num" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="url_list" />
+      <Variable x:TypeArguments="x:String" Name="url" />
+      <Variable x:TypeArguments="x:String" Name="file_name" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="586,71" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[url]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">https://www.therealreal.com/shop/women/clothing/jackets</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="586,71" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[file_name]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[url.Split("/").Last]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" ContinueOnError="False" DisplayName="Private: Use Application/Browser" sap:VirtualizedContainerService.HintSize="586,1537" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="84cd4eef-1371-4e61-b234-1d2622e023e6" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="552,1309" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGoToUrl ContinueOnError="False" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="510,93" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="[url]" Version="V3" />
+            <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[(url_from_web.Split(&quot;=&quot;c)(3)).Equals(url_to_be)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="510,1086" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+              <ui:InterruptibleDoWhile.Body>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="474,907" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="ui:UiElement" Name="next_button" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NExtractData ContinueOnError="False" DataTable="[url_dt]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='New column 0 Url' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;column exact='1' name='Column0' attr='href'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="432,168" sap2010:WorkflowViewState.IdRef="NExtractData_5" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="84cd4eef-1371-4e61-b234-1d2622e023e6" Version="V3">
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="281, 701, 1076, 14151" DesignTimeScaleFactor="1.1699999570846558" FriendlyName="'Rebecca TaylorPlaid'" FullSelectorArgument="&lt;webctrl class='product-grid' tag='DIV' /&gt;" Guid="352b62c3-16da-4fe4-a7bf-a47c55084bb1" InformativeScreenshot="24bdf23d2cde036203801e8fe9406772.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
+                    </uix:NExtractData.Target>
+                  </uix:NExtractData>
+                  <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="432,141" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                        <ui:AssignOperation sap:VirtualizedContainerService.HintSize="334.2857142857143,32.57142857142857" sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Int32">[page_num]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Int32">[page_num +1]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[url_to_be]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[page_num.ToString]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <uix:NClick ClickType="Single" ContinueOnError="False" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="432,168" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" OutUiElement="[next_button]" ScopeIdentifier="84cd4eef-1371-4e61-b234-1d2622e023e6" Version="V3">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/shop/women/clothing/dresses?first=120&amp;page=120" DesignTimeRectangle="1334, 586, 16, 16" DesignTimeScaleFactor="1.1699999570846558" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl class='chevron-arrow-right' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl class='chevron-arrow-right' tag='I'  /&gt;" Guid="66b97ece-fa62-4563-8565-734519d979f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAETkAABE5ARvZk0YAAACeSURBVDhPxdGxDcMgFIThDGWxCQswE+xDRRUpaajc07lhgUvOorTxYSLl7x7Fpwc88OP+A+acEWNsUz8JTCnBGCOh8pVVdOgNFXT4U67QYZD10FsgO0Nvg+wInQIZ0WVZEELY52nQew9rLUop+zwFEnPOodbaTr7gtr7wfK/Y2oHaEcZubXiGsWGwh7Eh8ApjMqhgTAJVjMkbKhgAfAD6K/7KLSEgswAAAABJRU5ErkJggg==" InformativeScreenshot="8be4cc030235413a61b3d5bf4b0f24c7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Women&amp;apos;s Designer Dresses on Sale | The RealReal' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NClick.Target>
+                  </uix:NClick>
+                  <uix:NGetAttribute Attribute="url" ContinueOnError="False" DelayBefore="3" DisplayName="Private: Get Attribute" sap:VirtualizedContainerService.HintSize="432,220" sap2010:WorkflowViewState.IdRef="NGetAttribute_3" ScopeIdentifier="84cd4eef-1371-4e61-b234-1d2622e023e6" Version="V3">
+                    <uix:NGetAttribute.Result>
+                      <OutArgument x:TypeArguments="x:String">[url_from_web]</OutArgument>
+                    </uix:NGetAttribute.Result>
+                    <uix:NGetAttribute.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/shop/women/clothing/dresses?after=YXJyYXljb25uZWN0aW9uOjIzOA%3D%3D&amp;first=120&amp;page=3" DesignTimeRectangle="578, 210, 210, 47" DesignTimeScaleFactor="1.1699999570846558" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl class='head-toolbar__logo-img-large' css-selector='body&amp;gt;div&amp;gt;header&amp;gt;div&amp;gt;a&amp;gt;div' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='head-toolbar__logo-img-large' type='' tag='DIV' aaname='' /&gt;" Guid="d4ab9c17-9108-4e13-b483-9089ca27e36d" ImageBase64="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" InformativeScreenshot="adac028c6ea44a00a14c58e897bcafbc.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Women&amp;apos;s Designer Dresses on Sale | The RealReal' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                    </uix:NGetAttribute.Target>
+                  </uix:NGetAttribute>
+                </Sequence>
+              </ui:InterruptibleDoWhile.Body>
+            </ui:InterruptibleDoWhile>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAABGdBTUEAALEQa0zv0AAAACBjSFJNAACHDwAAjA8AAP1SAACBQAAAfXkAAOmLAAA85QAAGcxzPIV3AAABF2lDQ1BJQ0MgUHJvZmlsZQAAKM9jYGDiyUnOLWYSYGDIzSspCnJ3UoiIjFJgv8PAyCDJwMygyWCZmFxc4BgQ4MOAE3y7BlQNBJd1QWYxkAa4UlKLk4H0HyCOSy4oKmFgYIwBsrnLSwpA7AwgWyQpG8yuAbGLgA4EsieA2OkQ9hKwGgh7B1hNSJAzkH0GyHZIR2InIbGh9oIAc7IRA9VBSWpFCYh2c2JgAIUpelghxJjFgNgYGBdLEGL5ixgYLL4CxScgxJJmMjBsb2VgkLiFEFNZwMDA38LAsO18cmlRGdRqKSA+zXiSOZl1Ekc29zcBe9FAaRPFj5oTjCSsJ7mxBpbHvs0uqGLt3DirZk3m/trLh18a/P8PAN5BU32YWvgkAAAACXBIWXMAABE5AAAROQEb2ZNGAAAD1klEQVRIS+2USSjvbRTH/xtTilCGEMotkUxJKDaGTGUtkZDItJBELGwQC0MkomSKdOuaMhUZSooMcTfmeSbz/H8/f0e/V+/GyrtyFk/nnOc8Z/yeR6X+ZvoJ8CX9BPiS/pcALy8vnE9PTw8PDzCvr6/K+fj4yPn8/PwfvZzX19cKD4kfOSHevr29fVRwf38vjBDBPjPcKl4g8ctjESEMrq6uFA3G5+fnwqvE+uLiYn9/f2dn5/j4mDqwRnN2dnZ5eUn6p6enmB0eHh4dHUkklPJwfX2dEzNuSfng4AAejUKaCrKysjw8POLj46uqqrKzs11cXJKSkuALCwtzcnJcXV1tbW3z8vJyc3M5ExISOjo6pOKVlZX09HQHB4ewsLCysrLMzMyUlJSSkpKlpSVud3d3NQGohTft7e0IUFtbm7a2dktLi4hUExAQ4OjoKHkh1tbW/vr1q6CggApo4NramrGxcWJiotgjEsze3n5xcRERG9X29nZjY+Pt7S3W0MTEhJaWVkNDA7xM2M/Pz8zMjHYp07O2tqZi4ZeXly0sLNLS0uDv7u44Ozs7dXV16cT7vVqFlrAi4GJoaIjruro6RGLQ8YiICDs7u83NTek+k6Rpzs7OMoOZmRl3d/eYmBhlwqRraGhYVFTEnPDwgSJci0VXV5eJiUl9fb2kf3NzExISQgAZ5t7eHpMg5aamJs0ztXpjY8PS0pImS31zc3OBgYFubm7gRRLSBCCUeMdoeHiY+DRa0URGRlpZWdF00vTx8YmNjaW/BOaWBKmMkfj7+xcXFwcHB/v6+lZUVGxtbSkFqRROUh4YGNDR0WHIkhEQCAoKwsXCwsLIyIiRkRHxPgMRPbfEBqbJycmmpqbV1dUfd+8N0AQQ10I9PT0MuaamRgkcHh4OimgOhba2turr6wPNk5MTcMG6UAFOU1NTsQQvUVFR5ubmQBGRW86Pr4LHgoHe3l4DAwMcwTNG9N7e3syAnsKjrKysVKlUdAweWl1dtbGxiYuLk+eYAWs0g4ODiKyLSvkkaCgnIGMPqEAZTGhoKKvEhsNL68mXJFg6+NnZWScnJ2UPyJUJeXp6spuybv+2iCUCcxkZGbQI5MzPz4P9P3/+kD4h8/PzAcy7Ew1FR0czj/Ly8tLSUj09PZA6NjYGbMTV+Pg4r7y8vEZHRzUtEkRDU1NTfX19IJVRT05OEgCL379/A63u7u6/f/+KGXqIaTU3N7OYJNHf3z89Pc33JQY0g1zpMxjRLJpoIUGOdEZQrMxffvLPjBgoorylsaIX4vZj0b6PfgJ8ST8BvqRvDqBW/wP7i5TOSBYcaAAAAABJRU5ErkJggg==" InformativeScreenshot="6c5974e8c630bd3e66eb1fd61973866b.jpg" Selector="&lt;html app='chrome.exe' url='https://www.therealreal.com/shop/women/clothing/dresses' /&gt;" Title="Women's Designer Dresses on Sale | The RealReal" Url="[url]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[url_dt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="586,125" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="[&quot;F:\PROJECTS\JK_SOFT_PROJECTS\PLG_DATA EXTRACTION\real_real_women_&quot;+file_name+&quot;.xlsx&quot;]" />
+  </Sequence>
+</Activity>
