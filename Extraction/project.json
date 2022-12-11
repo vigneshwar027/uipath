@@ -1,7 +1,7 @@
 {
   "name": "Extraction",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "real_real_data_extraction.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.16.0]",
     "UiPath.Mail.Activities": "[1.18.0]",
@@ -13,7 +13,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.1.0",
-  "projectVersion": "1.0.0",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -47,8 +47,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "dc2ef465-3686-4577-ad76-543fb35f555b",
+      "filePath": "real_real_data_extraction.xaml",
+      "uniqueId": "3e736b03-2fb8-4911-b1f0-cae3ac767ec9",
       "input": [],
       "output": []
     }
