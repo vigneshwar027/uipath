@@ -122,10 +122,7 @@
         <OutArgument x:TypeArguments="scg:List(x:String)">[url_list]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[{"https://www.therealreal.com/shop/women/accessories/sunglasses",
-"https://www.therealreal.com/shop/women/accessories/belts",
-"https://www.therealreal.com/shop/women/accessories",
-"https://www.therealreal.com/shop/women/shoes/boots",
+        <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[{"https://www.therealreal.com/shop/women/shoes/boots",
 "https://www.therealreal.com/shop/women/shoes/pumps",
 "https://www.therealreal.com/shop/women/shoes/flats",
 "https://www.therealreal.com/shop/women/shoes"}.ToList]</InArgument>
