@@ -122,10 +122,7 @@
         <OutArgument x:TypeArguments="scg:List(x:String)">[url_list]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[{"https://www.therealreal.com/shop/women/shoes/boots",
-"https://www.therealreal.com/shop/women/shoes/pumps",
-"https://www.therealreal.com/shop/women/shoes/flats",
-"https://www.therealreal.com/shop/women/shoes"}.ToList]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)">[{"https://www.therealreal.com/shop/women/accessories"}.ToList]</InArgument>
       </Assign.Value>
     </Assign>
     <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" ContinueOnError="False" DisplayName="Private: Use Application/Browser" sap:VirtualizedContainerService.HintSize="664,2286" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="84cd4eef-1371-4e61-b234-1d2622e023e6" Timeout="120" Version="V2" WindowResize="Maximize">
@@ -147,6 +144,13 @@
                     <DelegateInArgument x:TypeArguments="x:String" Name="url" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="552,1829" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="output_file">
+                        <Variable.Default>
+                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;C:\Users\Dell\Documents\UiPath\Extraction\assets\real_real_urls\real_real_women_&quot;+file_name+&quot;.xlsx&quot;" />
+                        </Variable.Default>
+                      </Variable>
+                    </Sequence.Variables>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -215,7 +219,7 @@
                         </Sequence>
                       </ui:InterruptibleDoWhile.Body>
                     </ui:InterruptibleDoWhile>
-                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[url_dt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="510,125" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="[&quot;F:\PROJECTS\JK_SOFT_PROJECTS\PLG_DATA EXTRACTION\urls\real_real_women_&quot;+file_name+&quot;.xlsx&quot;]" />
+                    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[url_dt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="510,125" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="[output_file]" />
                     <ui:ClearDataTable DataTable="[url_dt]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
                     <Assign sap:VirtualizedContainerService.HintSize="510,71" sap2010:WorkflowViewState.IdRef="Assign_6">
                       <Assign.To>
