@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="real_real_data_extraction" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="746,5451" sap2010:WorkflowViewState.IdRef="real_real_data_extraction_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="real_real_data_extraction" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="746,5629" sap2010:WorkflowViewState.IdRef="real_real_data_extraction_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
       <x:String>System.Activities</x:String>
@@ -96,7 +96,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="real_real_data_extraction" sap:VirtualizedContainerService.HintSize="756,5386" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="real_real_data_extraction" sap:VirtualizedContainerService.HintSize="756,5564" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="url_dt" />
       <Variable x:TypeArguments="sd:DataTable" Name="result_dt" />
@@ -166,11 +166,7 @@
         </Variable.Default>
       </Variable>
       <Variable x:TypeArguments="x:String" Default="RealReal" Name="website" />
-      <Variable x:TypeArguments="x:String" Name="input_file">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">assets/input_file.xlsx</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="assets/input_file.xlsx" Name="input_file" />
       <Variable x:TypeArguments="x:String" Default="assets/output_file.xlsx" Name="output_file" />
       <Variable x:TypeArguments="sd:DataTable" Name="errors_dt" />
       <Variable x:TypeArguments="x:String" Default="assets/errors_file.xlsx" Name="errors_file" />
@@ -189,11 +185,7 @@
           <Literal x:TypeArguments="x:String" Value="" />
         </Variable.Default>
       </Variable>
-      <Variable x:TypeArguments="x:Int32" Name="cont_exc_count">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="0" Name="cont_exc_count" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -203,13 +195,13 @@
     <ui:BuildDataTable DataTable="[result_dt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="714,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;gender&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;brand&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;category&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;sub_cat&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;desc&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;cond&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;material&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;color&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;actual_price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;discount_price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;est_price&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;status&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;timestamp&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;gender /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:BuildDataTable DataTable="[errors_dt]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="714,69" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;url&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;msg&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName&gt;&#xA;    &lt;url /&gt;&#xA;  &lt;/TableName&gt;&#xA;&lt;/NewDataSet&gt;" />
     <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[url_dt]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="714,97" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="[input_file]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="False" DisplayName="Use Browser Chrome: Women's Designer Shoes on Sale | The RealReal" sap:VirtualizedContainerService.HintSize="714,4941" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" Timeout="120" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" ContinueOnError="False" DisplayName="Use Browser Chrome: Women's Designer Shoes on Sale | The RealReal" sap:VirtualizedContainerService.HintSize="714,5119" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" Timeout="120" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="680,4713" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="680,4891" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="url_count" />
             </Sequence.Variables>
@@ -218,13 +210,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[url_count]" DataTable="[url_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="638,4484" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[url_count]" DataTable="[url_dt]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="638,4662" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="rw" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,4356" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="604,4534" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -263,7 +255,7 @@
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
-                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="562,3516" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="562,3694" sap2010:WorkflowViewState.IdRef="TryCatch_1">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -271,7 +263,7 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                       <TryCatch.Try>
-                        <Sequence sap:VirtualizedContainerService.HintSize="524,3269" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                        <Sequence sap:VirtualizedContainerService.HintSize="524,3447" sap2010:WorkflowViewState.IdRef="Sequence_4">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -299,46 +291,57 @@
                               </Sequence>
                             </If.Else>
                           </If>
-                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Stella McCartney:'" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" ScrapingMethod="TextAttribute" TextString="[info_tree]" Timeout="15" Version="V3">
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Stella McCartney:'" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[info_tree]" Timeout="15" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/men/clothing/outerwear/stella-mccartney-w-tags-b5ljj" DesignTimeRectangle="25, 356, 916, 47" DesignTimeScaleFactor="1.1100000143051147" FriendlyName="'Stella McCartney:'" FullSelectorArgument="&lt;webctrl class='breadcrumbs' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='breadcrumbs' tag='DIV' type='' aaname='' /&gt;" Guid="f4b9c1d0-59f3-4a8b-a125-028352adc901" ImageBase64="" InformativeScreenshot="0ca9664372d4cac3a3133ab77c14abe2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text actual price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" ScrapingMethod="TextAttribute" TextString="[actual_price]" Version="V3">
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text actual price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[actual_price]" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/dresses/ted-baker-printed-mini-dress-fky6c" DesignTimeRectangle="941, 521, 400, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="Text" FriendlyName="'$850.00'" FullSelectorArgument="&lt;webctrl tag='DIV' class='*product-price*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='*product-price*' type='' /&gt;" Guid="50d1346a-8573-4310-a70a-dbe739e4db0a" ImageBase64="" InformativeScreenshot="921ad06399d7ec28a7bdedf4744574da.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text status" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" ScrapingMethod="TextAttribute" TextString="[status]" Version="V3">
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text status" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[status]" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/jackets/gucci-vintage-2003-denim-jacket-fsa1u" DesignTimeRectangle="941, 593, 400, 53" DesignTimeScaleFactor="1.1100000143051147" ElementType="Button" FriendlyName="'Add to Bag'" FullSelectorArgument="&lt;webctrl tag='BUTTON' parentclass='pdp-call-to-action' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' parentclass='pdp-call-to-action' type='' class='js-add-to-cart-button' /&gt;" Guid="903f552d-6cfe-42c3-9e66-9fc8074cd929" ImageBase64="" InformativeScreenshot="17a2ca472b2ae0b460ec575856d33b27.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text discount price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" ScrapingMethod="TextAttribute" TextString="[discount_price]" Timeout="5" Version="V3">
+                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text discount price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[discount_price]" Timeout="5" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/dresses/gucci-wool-dress-w-tags-cl2ui" DesignTimeRectangle="941, 545, 400, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="Text" FriendlyName="'Now 70% off - $255.00'" FullSelectorArgument="&lt;webctrl class='*product-discount*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='product-discount' tag='DIV' type='' /&gt;" Guid="97ebadb0-5942-4ca6-b017-cb0fe4ee8893" ImageBase64="" InformativeScreenshot="e24e2b32897c79425f9478541e7c1af9.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Complete" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text EST price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" ScrapingMethod="TextAttribute" TextString="[est_price]" Timeout="5" Version="V3">
+                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text EST price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[est_price]" Timeout="5" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/dresses/gucci-wool-dress-w-tags-cl2ui" DesignTimeRectangle="941, 570, 400, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="Text" FriendlyName="'Est. Retail $1,700.00'" FullSelectorArgument="&lt;webctrl class='*product-msrp*' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='product-msrp' tag='DIV' type='' /&gt;" Guid="8043379e-2c46-4a85-9e86-92682f7526db" ImageBase64="" InformativeScreenshot="71cac224f2df3da488967adf320f4c44.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text Desc" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" ScrapingMethod="TextAttribute" TextString="[desc]" Version="V3">
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text Desc" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[desc]" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/men/clothing/outerwear/stella-mccartney-w-tags-b5ljj" DesignTimeRectangle="941, 346, 400, 100" DesignTimeScaleFactor="1.1100000143051147" FriendlyName="'Stella McCartneyBrownFi…'" FullSelectorArgument="&lt;webctrl class='description' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='description' tag='DIV' type='' aaname='' /&gt;" Guid="b927e441-59bf-4362-9a11-babf81eb316f" ImageBase64="" InformativeScreenshot="c9497063c3cd406bea56675160376cd7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text Cond" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" ScrapingMethod="TextAttribute" TextString="[cond]" Version="V3">
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text Cond" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[cond]" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/men/clothing/outerwear/stella-mccartney-w-tags-b5ljj" DesignTimeRectangle="1292, 413, 48, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="Text" FriendlyName="'Pristine'" FullSelectorArgument="&lt;webctrl class='condition__text' parentid='pdp-details-Condition' tag='DIV' parentclass='*active condition*' /&gt;" FuzzySelectorArgument="&lt;webctrl class='condition__text' parentid='pdp-details-Condition' tag='DIV' parentclass='*active condition*' type='' /&gt;" Guid="ee76909f-bbff-4596-9209-310169196633" ImageBase64="" InformativeScreenshot="26896eb9959469df124968b0a4e6675e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
-                          <uix:NGetText ContinueOnError="True" DisplayName="Get Text Material" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[material]" Timeout="5" Version="V3">
-                            <uix:NGetText.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/dresses/gucci-wool-dress-w-tags-cl2ui" DesignTimeRectangle="941, 267, 400, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="ListItem" FriendlyName="'Fabric: 92%'" FullSelectorArgument="&lt;webctrl parentid='pdp-details-Details' tag='LI' innertext='Fabric*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pdp-details-Details' tag='LI' type='' class='' /&gt;" Guid="2577c962-f347-4ab6-8584-79e862528adc" ImageBase64="" InformativeScreenshot="f0d3a7f6282ffcff47b95d15a3751ded.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
-                            </uix:NGetText.Target>
-                          </uix:NGetText>
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="482,346" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,258" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <uix:NGetText ContinueOnError="True" DisplayName="Get Text Material" sap:VirtualizedContainerService.HintSize="358,168" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[material]" Timeout="5" Version="V3">
+                                  <uix:NGetText.Target>
+                                    <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/dresses/gucci-wool-dress-w-tags-cl2ui" DesignTimeRectangle="941, 267, 400, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="ListItem" FriendlyName="'Fabric: 92%'" FullSelectorArgument="&lt;webctrl parentid='pdp-details-Details' tag='LI' innertext='Fabric*' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pdp-details-Details' tag='LI' type='' class='' /&gt;" Guid="2577c962-f347-4ab6-8584-79e862528adc" ImageBase64="" InformativeScreenshot="f0d3a7f6282ffcff47b95d15a3751ded.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+                                  </uix:NGetText.Target>
+                                </uix:NGetText>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
                           <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="482,234" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
                             <ui:MultipleAssign.AssignOperations>
                               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
@@ -410,7 +413,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                             </ActivityAction.Argument>
-                            <Sequence sap:VirtualizedContainerService.HintSize="400,838" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <Sequence sap:VirtualizedContainerService.HintSize="400,839" sap2010:WorkflowViewState.IdRef="Sequence_5">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
