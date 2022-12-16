@@ -110,11 +110,7 @@
       <Variable x:TypeArguments="x:Int32" Default="1" Name="page_num" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="url_list" />
       <Variable x:TypeArguments="x:String" Name="url" />
-      <Variable x:TypeArguments="x:String" Name="file_name">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">new_file</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="new_file" Name="file_name" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -126,7 +122,11 @@
         <OutArgument x:TypeArguments="scg:List(x:String)">[url_list]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[{"https://www.therealreal.com/shop/women/handbags/clutches"}.ToList]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[{"https://www.therealreal.com/designers/christian-dior/women",
+"https://www.therealreal.com/designers/prada/women",
+"https://www.therealreal.com/designers/moncler/women",
+"https://www.therealreal.com/designers/louis-vuitton/women",
+"https://www.therealreal.com/designers/gucci/women"}.ToList]</InArgument>
       </Assign.Value>
     </Assign>
     <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" ContinueOnError="False" DisplayName="Private: Use Application/Browser" sap:VirtualizedContainerService.HintSize="664,2286" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="84cd4eef-1371-4e61-b234-1d2622e023e6" Timeout="120" Version="V2" WindowResize="Maximize">
@@ -165,11 +165,11 @@
                         <OutArgument x:TypeArguments="x:String">[file_name]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[url.Split("/").Last.ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String">[url.Split("/")(4).ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
                     <uix:NGoToUrl ContinueOnError="False" DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="510,93" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Timeout="120" Url="[url]" Version="V3" />
-                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[(url_from_web.Split(&quot;=&quot;c)(3)).Equals(url_to_be)]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="510,1086" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
+                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="510,1086" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_3">
                       <ui:InterruptibleDoWhile.Body>
                         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="474,907" sap2010:WorkflowViewState.IdRef="Sequence_10">
                           <Sequence.Variables>
@@ -222,6 +222,9 @@
                           </uix:NGetAttribute>
                         </Sequence>
                       </ui:InterruptibleDoWhile.Body>
+                      <ui:InterruptibleDoWhile.Condition>
+                        <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="url_from_web.Split(&quot;page=&quot;).Last.Split(&quot;&amp;&quot;).First.Equals(url_to_be)" />
+                      </ui:InterruptibleDoWhile.Condition>
                     </ui:InterruptibleDoWhile>
                     <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[url_dt]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="510,125" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" WorkbookPath="[&quot;C:\Users\Dell\Documents\UiPath\Extraction\assets\real_real_urls\real_real_women_&quot;+file_name+&quot;.xlsx&quot;]" />
                     <ui:ClearDataTable DataTable="[url_dt]" DisplayName="Clear Data Table" sap:VirtualizedContainerService.HintSize="510,91" sap2010:WorkflowViewState.IdRef="ClearDataTable_1" />
