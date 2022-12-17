@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="real_real_single_with_loop" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="696,2596" sap2010:WorkflowViewState.IdRef="real_real_single_with_loop_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="real_real_single_with_loop" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="696,2556" sap2010:WorkflowViewState.IdRef="real_real_single_with_loop_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
       <x:String>System.Activities</x:String>
@@ -101,7 +101,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="real_real_single_with_loop" sap:VirtualizedContainerService.HintSize="706,2531" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="real_real_single_with_loop" sap:VirtualizedContainerService.HintSize="706,2491" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
       <Variable x:TypeArguments="sd:DataTable" Name="url_dt" />
@@ -122,10 +122,12 @@
         <OutArgument x:TypeArguments="scg:List(x:String)">[url_list]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="scg:List(x:String)">[{"https://www.therealreal.com/designers/prada/women"}.ToList]</InArgument>
+        <InArgument x:TypeArguments="scg:List(x:String)" xml:space="preserve">[{"https://www.therealreal.com/designers/moncler/women",
+"https://www.therealreal.com/designers/louis-vuitton/women",
+"https://www.therealreal.com/designers/gucci/women"}.ToList]</InArgument>
       </Assign.Value>
     </Assign>
-    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" ContinueOnError="False" DisplayName="Private: Use Application/Browser" sap:VirtualizedContainerService.HintSize="664,2326" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="84cd4eef-1371-4e61-b234-1d2622e023e6" Timeout="120" Version="V2" WindowResize="Maximize">
+    <uix:NApplicationCard AttachMode="SingleWindow" CloseMode="Never" ContinueOnError="False" DisplayName="Private: Use Application/Browser" sap:VirtualizedContainerService.HintSize="664,2286" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" IsIncognito="False" OpenMode="IfNotOpen" ScopeGuid="84cd4eef-1371-4e61-b234-1d2622e023e6" Timeout="120" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
