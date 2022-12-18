@@ -291,14 +291,14 @@
                               </Sequence>
                             </If.Else>
                           </If>
+                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text actual price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[actual_price]" Timeout="5" Version="V3">
+                            <uix:NGetText.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/dresses/ted-baker-printed-mini-dress-fky6c" DesignTimeRectangle="941, 521, 400, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="Text" FriendlyName="'$850.00'" FullSelectorArgument="&lt;webctrl tag='DIV' class='*product-price*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='*product-price*' type='' /&gt;" Guid="50d1346a-8573-4310-a70a-dbe739e4db0a" ImageBase64="" InformativeScreenshot="921ad06399d7ec28a7bdedf4744574da.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
+                            </uix:NGetText.Target>
+                          </uix:NGetText>
                           <uix:NGetText ContinueOnError="False" DisplayName="Get Text 'Stella McCartney:'" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[info_tree]" Timeout="15" Version="V3">
                             <uix:NGetText.Target>
                               <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/men/clothing/outerwear/stella-mccartney-w-tags-b5ljj" DesignTimeRectangle="25, 356, 916, 47" DesignTimeScaleFactor="1.1100000143051147" FriendlyName="'Stella McCartney:'" FullSelectorArgument="&lt;webctrl class='breadcrumbs' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl class='breadcrumbs' tag='DIV' type='' aaname='' /&gt;" Guid="f4b9c1d0-59f3-4a8b-a125-028352adc901" ImageBase64="" InformativeScreenshot="0ca9664372d4cac3a3133ab77c14abe2.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
-                            </uix:NGetText.Target>
-                          </uix:NGetText>
-                          <uix:NGetText ContinueOnError="False" DisplayName="Get Text actual price" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_6" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[actual_price]" Version="V3">
-                            <uix:NGetText.Target>
-                              <uix:TargetAnchorable BrowserURL="https://www.therealreal.com/products/women/clothing/dresses/ted-baker-printed-mini-dress-fky6c" DesignTimeRectangle="941, 521, 400, 25" DesignTimeScaleFactor="1.1100000143051147" ElementType="Text" FriendlyName="'$850.00'" FullSelectorArgument="&lt;webctrl tag='DIV' class='*product-price*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='*product-price*' type='' /&gt;" Guid="50d1346a-8573-4310-a70a-dbe739e4db0a" ImageBase64="" InformativeScreenshot="921ad06399d7ec28a7bdedf4744574da.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*RealReal*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" WaitForReadyArgument="Interactive" />
                             </uix:NGetText.Target>
                           </uix:NGetText>
                           <uix:NGetText ContinueOnError="False" DisplayName="Get Text status" sap:VirtualizedContainerService.HintSize="482,168" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="ffccd45a-3cd9-479a-ac9f-fd20044e9b51" TextString="[status]" Version="V3">
