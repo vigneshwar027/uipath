@@ -20620,15 +20620,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dell\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Extraction",
       "projectName": "Extraction",
-      "projectPath": "C:\\Users\\Dell\\Documents\\UiPath\\Extraction\\.local",
-      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\Documents\\UiPath\\Extraction\\.local"
+      "projectPath": "E:\\JK SOFT PROJECTS\\uipath\\Extraction\\.local",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "E:\\JK SOFT PROJECTS\\uipath\\Extraction\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -20659,7 +20659,7 @@
             "version": "[22.10.1, 22.10.1]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Dell\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
